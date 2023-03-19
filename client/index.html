@@ -10,25 +10,43 @@
 <body id="body">
 
     <div id="app">
-        <input type="text" id="pesel">
+
+        <!-- kandydaci -->
+        
+        <div id="kandydaci">
         <div id="k1" class="kandydaci">
-            <h3>k1k1k1k1k1k1k1k1k1k1</h3>
-            <button class="glosoj">glosoj</button>
+            <h3>k1</h3>
             
         </div>
 
         <div id="k2" class="kandydaci">
-            <h3>k2k2k2k2k2k2k2k2k2k2</h3>
-            <button class="glosoj">glosoj</button>
-            
+            <h3>k2</h3>
         </div>
 
         <div id="k3" class="kandydaci">
-            <h3>k2k2k2k2k2k2k2k2k2k2</h3>
-            
-            <button class="glosoj">glosoj</button>
+            <h3>k2</h3> 
+
         </div>
         
+        </div>
+
+        <!-- oddajGlos -->
+
+        <div id="oddajGlos">
+            <div>
+            podaj pesel:
+            <input type="text" id="pesel">
+            </div>
+            <div>
+            podaj kandydata:
+            <input type="text" id="wybrany">
+            </div>
+            <button class="glosoj" onclick="glosoj()">glosoj</button>
+
+        </div>
+
+
+
     </div>
     
     <script src="app.js"></script>

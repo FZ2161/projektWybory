@@ -20,11 +20,32 @@ body{
     align-items: center;
 }
 
+#kandydaci{
+    display: flex;
+    gap: 10px;
+}
+
 .kandydaci{
     padding: 20px;
     border: 2px solid greenyellow;
-    height: 150px;
-    width: 500px;
+    height: 100px;
+    width: 100px;
     color: rgb(177, 177, 224);
 
+}
+
+#oddajGlos{
+    color: rgb(177, 177, 224);
+    width: 250px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+#glos{
+    color: green;
+}
+
+#red{
+    color: red;
 }
