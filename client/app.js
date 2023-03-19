@@ -4,17 +4,17 @@ const wybrany = document.getElementById('wybrany')
 const app = document.getElementById('app')
 const glos =  document.getElementById('zaglosowano')
 
+const baseURL = 'http://localhost:3000'
 
-
-function glosoj(){
+async function glosoj(){
 
     const nowyPesel = pesel.value
     const nowyKandydat = wybrany.value
 
     //potwierdzenie poprawności
-    if(nowyPesel!='' && nowyKandydat=='k1' || nowyKandydat=='k2' || nowyKandydat=='k'){
+    if(nowyPesel!='' && nowyKandydat=='k1' || nowyKandydat=='k2' || nowyKandydat=='k3'){
         const zaglosowano = document.createElement('h2')
-        zaglosowano.innerHTML = 'pomyślnie oddano głos'
+        zaglosowano.innerHTML = 'oddano głos'
         zaglosowano.setAttribute('id', 'glos')
 
         app.appendChild(zaglosowano)
@@ -35,7 +35,13 @@ function glosoj(){
               }, 4000);
     }
       
+    //wysyłanie
 
+    const url = `${baseURL}/add/${pesel.value}/${wybrany.value}`
 
+    await fetch(url)
+
+    pesel.value = ''
+    wybrany.value = ''
 
 }

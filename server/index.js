@@ -25,4 +25,33 @@ app.get('/', (req, res)=>{
 })
 
 
+app.get('/select', (req, res)=>{
+    const sql = 'SELECT * FROM glosy'
+    con.query(sql, function(err, result, fields){
+        if(err) console.log(err)
+        else res.send(result)
+
+    })//zapytanie
+})
+
+
+
+
+
+
+
+
+app.get('/add/:pesel/:wybrany', (req, res)=>{
+    const pesel = req.params.pesel
+    const wybrany = req.params.wybrany
+
+    const sql = `INSERT INTO glosy (kandydat, pesel) VALUES ('${wybrany}', '${pesel}')`
+
+    con.query(sql, (err, result, filds)=>{
+        if(err) console.log(err)
+        else res.send(result)
+    })
+})
+
+
 app.listen(port)
