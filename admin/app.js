@@ -27,21 +27,45 @@ async function getKs(){
 
 getKs()
 
-
+    
 
 function show(){
-    var k1Len = k1.length
-    var k2Len = k2.length
-    var k3Len = k3.length
+    var k1Len = parseInt(k1.length)
+    var k2Len = parseInt(k2.length)
+    var k3Len = parseInt(k3.length)
     
     console.log(k3Len)
     
     div1.innerHTML = ''
 
+    
 
-    var xValues = []
-    var yValues = [k1Len, k2Len, k3Len]
-    var barColors=[]
+    var kandydaci = ['k1', 'k2', 'k3']
+    var glosy = [k1Len, k2Len, k3Len]
+    var barColors=[
+        "#b91d47",
+        "#00aba9",
+        "#2b5797",
+    ]
+
+
+
+        new Chart('myChart', {
+        type: 'pie', 
+        data: {
+            labels: kandydaci, 
+            datasets: [{
+                backgroundColor: barColors,
+                data: glosy
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'głosy oddane na poszczególnych kandydatów'
+            }
+        }
+    })
 
 }
 
