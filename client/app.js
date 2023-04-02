@@ -13,7 +13,7 @@ async function glosoj(){
     const nowyPesel = pesel.value
     const nowyKandydat = wybrany.value
 
-    //potwierdzenie poprawności
+    //potwierdzenie poprawności + oddanie glosu
     if((nowyPesel != '') && (nowyKandydat == 'k1' || nowyKandydat == 'k2' || nowyKandydat == 'k3')){
         const zaglosowano = document.createElement('h2')
         zaglosowano.innerHTML = 'oddano głos'
