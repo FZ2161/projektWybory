@@ -26,7 +26,7 @@ app.get('/', (req, res)=>{
 
 
 app.get('/select', (req, res)=>{
-    const sql = 'SELECT * FROM glosy'
+    const sql = 'SELECT * FROM glosy WHERE kandydat = "k2"'
     con.query(sql, function(err, result, fields){
         if(err) console.log(err)
         else res.send(result)
@@ -35,9 +35,27 @@ app.get('/select', (req, res)=>{
 })
 
 
-
-
-
+app.get('/k1', (req, res)=>{
+    const sql = 'SELECT * FROM glosy WHERE kandydat ="k1"'
+    con.query(sql, (err, result, fields)=>{
+        if(err) console.log(err)
+        else res.send(result)
+    })
+})
+app.get('/k2', (req, res)=>{
+    const sql = 'SELECT * FROM glosy WHERE kandydat ="k2"'
+    con.query(sql, (err, result, fields)=>{
+        if(err) console.log(err)
+        else res.send(result)
+    })
+})
+app.get('/k3', (req, res)=>{
+    const sql = 'SELECT * FROM glosy WHERE kandydat ="k3"'
+    con.query(sql, (err, result, fields)=>{
+        if(err) console.log(err)
+        else res.send(result)
+    })
+})
 
 
 

@@ -1,37 +1,50 @@
 const body = document.getElementById('body')
+const div1 = document.getElementById('div1')
+var glosy =[]
+var k1=[]
+var k2 =[]
+var k3 = []
+
+async function getData(){
+const data = await fetch('http://localhost:3000/select')
+glosy = await data.json()
+
+}
+getData()
+
+async function getKs(){
+    const data1 = await fetch('http://localhost:3000/k1')
+    k1 = await data1.json()
+
+    const data2 = await fetch('http://localhost:3000/k2')
+    k2 = await data2.json()
+
+    const data3 = await fetch('http://localhost:3000/k3')
+    k3 = await data3.json()
+
+    console.log(k2)
+}
+
+getKs()
 
 
 
+function show(){
+    var k1Len = k1.length
+    var k2Len = k2.length
+    var k3Len = k3.length
+    
+    console.log(k3Len)
+    
+    div1.innerHTML = ''
 
-var xyValues = [
-    {x:50, y:7},
-    {x:60, y:8},
-    {x:70, y:8},
-    {x:80, y:9},
-    {x:90, y:9},
-    {x:100, y:9},
-    {x:110, y:10},
-    {x:120, y:11},
-    {x:130, y:14},
-    {x:140, y:14},
-    {x:150, y:15}
-  ];
-  
-  new Chart("myChart", {
-    type: "scatter",
-    data: {
-      datasets: [{
-        pointRadius: 4,
-        pointBackgroundColor: "rgb(50),150,255)",
-        data: xyValues
-      }]
-    },
-    options: {
-      legend: {display: false},
-      scales: {
-        xAxes: [{ticks: {min: 40, max:160}}],
-        yAxes: [{ticks: {min: 6, max:16}}],
-      }
-    }
-  });
+
+    var xValues = []
+    var yValues = [k1Len, k2Len, k3Len]
+    var barColors=[]
+
+}
+
+
+
 
