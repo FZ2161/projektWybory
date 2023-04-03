@@ -7,7 +7,7 @@ const port = 3000
 
 app.use(cors())
 
-
+//createConnection
 var con = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -20,13 +20,14 @@ con.connect(function(err) {
     else console.log('polaczono z db')
 })
 
+//test polaczenia
 app.get('/', (req, res)=>{
     res.send('ok')
 })
 
 
 app.get('/select', (req, res)=>{
-    const sql = 'SELECT * FROM glosy WHERE kandydat = "k2"'
+    const sql = 'SELECT * FROM glosy'
     con.query(sql, function(err, result, fields){
         if(err) console.log(err)
         else res.send(result)
@@ -34,7 +35,7 @@ app.get('/select', (req, res)=>{
     })//zapytanie
 })
 
-
+//wyniki danych kandydatów w tablicy
 app.get('/k1', (req, res)=>{
     const sql = 'SELECT * FROM glosy WHERE kandydat ="k1"'
     con.query(sql, (err, result, fields)=>{
@@ -59,6 +60,7 @@ app.get('/k3', (req, res)=>{
 
 
 
+//dodawanie głosu
 app.get('/add/:pesel/:wybrany', (req, res)=>{
     const pesel = req.params.pesel
     const wybrany = req.params.wybrany
