@@ -21,11 +21,14 @@ con.connect(function(err) {
 })
 
 //test polaczenia
+///////////////
 app.get('/', (req, res)=>{
     res.send('ok')
 })
+///////////////////////////////////
 
-
+//SELECT *
+////////////
 app.get('/select', (req, res)=>{
     const sql = 'SELECT * FROM glosy'
     con.query(sql, function(err, result, fields){
@@ -34,8 +37,11 @@ app.get('/select', (req, res)=>{
 
     })//zapytanie
 })
+/////////////////////////////////////
+
 
 //wyniki danych kandydatów w tablicy
+//////////////
 app.get('/k1', (req, res)=>{
     const sql = 'SELECT * FROM glosy WHERE kandydat ="k1"'
     con.query(sql, (err, result, fields)=>{
@@ -57,10 +63,11 @@ app.get('/k3', (req, res)=>{
         else res.send(result)
     })
 })
-
+/////////////////////////////////////////
 
 
 //dodawanie głosu
+////////////
 app.get('/add/:pesel/:wybrany', (req, res)=>{
     const pesel = req.params.pesel
     const wybrany = req.params.wybrany
@@ -72,6 +79,6 @@ app.get('/add/:pesel/:wybrany', (req, res)=>{
         else res.send(result)
     })
 })
-
+////////////////////////////////////
 
 app.listen(port)
