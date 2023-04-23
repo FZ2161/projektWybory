@@ -1,5 +1,7 @@
 const body = document.getElementById('body')
 const div1 = document.getElementById('div1')
+const tabela = document.getElementById('tabela')
+const table = document.getElementById('table')
 var glosy =[]
 var k1=[]
 var k2 =[]
@@ -36,7 +38,7 @@ function show(){
     
     console.log(k3Len)
     
-    div1.innerHTML = ''
+    tabela.innerHTML = ''
 
     
 
@@ -68,53 +70,72 @@ function show(){
     })
 
 
-    // // tabela
-    // const table = document.createElement('table')
+    // tabela
+    /////////////////////////////////////////
+    const table = document.createElement('table')
 
-    // const tr1 = document.createElement('tr')
-    // const tr2 = document.createElement('tr')
+    const tr1 = document.createElement('tr')
+    const tr2 = document.createElement('tr')
 
-    // const td1 = document.createElement('td')
-    // const td2 = document.createElement('td')
-    // const td3 = document.createElement('td')
+    const td1 = document.createElement('th')
+    const td2 = document.createElement('th')
+    const td3 = document.createElement('th')
 
-    // const td4 = document.createElement('td')
-    // const td5 = document.createElement('td')
-    // const td6 = document.createElement('td')
+    const td4 = document.createElement('td')
+    const td5 = document.createElement('td')
+    const td6 = document.createElement('td')
 
-    // //classlist
-    // td1.classList    
-    // td1.classList
-    // td1.classList
-    // td1.classList
-    // td1.classList
-    // td1.classList    
+    //classlist
+    td1.classList    
+    td1.classList
+    td1.classList
+    td1.classList
+    td1.classList
+    td1.classList    
 
-    // //innerHTML
+    //innerHTML
 
-    // td1.innerHTML = '      k1      '
-    // td2.innerHTML = '      k2      '
-    // td3.innerHTML = '      k3      '
+    td1.innerHTML = '      k1      '
+    td2.innerHTML = '      k2      '
+    td3.innerHTML = '      k3      '
 
-    // td4.innerHTML = ''
-    // td5.innerHTML = ''
-    // td6.innerHTML = ''   
+    td4.innerHTML = k1.length
+    td5.innerHTML = k2.length
+    td6.innerHTML = k3.length
 
-    // //appendchild
-    // tr1.appendChild(td1)
-    // tr1.appendChild(td2)
-    // tr1.appendChild(td3)
+    //appendchild
+    tr1.appendChild(td1)
+    tr1.appendChild(td2)
+    tr1.appendChild(td3)
 
-    // tr2.appendChild(td4)
-    // tr2.appendChild(td5)
-    // tr2.appendChild(td6)
+    tr2.appendChild(td4)
+    tr2.appendChild(td5)
+    tr2.appendChild(td6)
 
-    // table.appendChild(tr1)
-    // table.appendChild(tr2)
+    table.appendChild(tr1)
+    table.appendChild(tr2)
 
-    // body.appendChild(table)
+    tabela.appendChild(table)
+    /////////////////////////////////////////////
+
+    const lider =document.createElement('div')
+    lider.setAttribute('id', 'lider')
+    if(k1Len>k2Len&&k1Len>k3Len){
+    lider.innerHTML = 'lider: k1'
+    }
+    else if(k2Len>k1Len&&k2Len>k3Len){
+    lider.innerHTML = 'lider: k2'
+    }
+    else if(k3Len>k1Len&&k3Len>k2Len){
+    lider.innerHTML = 'lider: k3'
+    }
+    else
+    {
+    lider.innerHTML = 'brak lidera'
+    }
+
+
+body.appendChild(lider)
+
+
 }
-
-
-
-

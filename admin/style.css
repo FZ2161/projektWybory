@@ -1,18 +1,21 @@
 body{
     background-color: rgb(34, 34, 85);
-    display: grid;
-    /* grid-template-areas: 'div1 tabela';
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100vh; */
-}
-/* #div1{
-    grid-area: div1;
-}
-#tabela{
-    grid-area: tabela;
 }
 
-.chartjs-size-minitor{
-    height: 0;
-    width: 0;
-} */
+#tabela{
+    color: chartreuse;
+    height: 200px;
+    width: 200px;
+}
+
+table, th, td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px; 
+
+}
+
+#lider{
+    color: chartreuse;
+
+}
