@@ -22,7 +22,7 @@ async function getKs(){
     const data3 = await fetch('http://localhost:3000/k3')
     k3 = await data3.json()
 
-    console.log(k2)
+    console.log(glosy)
 }
 
 getKs()
@@ -68,51 +68,51 @@ function show(){
     })
 
 
-    //tabela
-    const table = document.createElement('table')
+    // // tabela
+    // const table = document.createElement('table')
 
-    const tr1 = document.createElement('tr')
-    const tr2 = document.createElement('tr')
+    // const tr1 = document.createElement('tr')
+    // const tr2 = document.createElement('tr')
 
-    const td1 = document.createElement('td')
-    const td2 = document.createElement('td')
-    const td3 = document.createElement('td')
+    // const td1 = document.createElement('td')
+    // const td2 = document.createElement('td')
+    // const td3 = document.createElement('td')
 
-    const td4 = document.createElement('td')
-    const td5 = document.createElement('td')
-    const td6 = document.createElement('td')
+    // const td4 = document.createElement('td')
+    // const td5 = document.createElement('td')
+    // const td6 = document.createElement('td')
 
-    //classlist
-    td1.classList    
-    td1.classList
-    td1.classList
-    td1.classList
-    td1.classList
-    td1.classList    
+    // //classlist
+    // td1.classList    
+    // td1.classList
+    // td1.classList
+    // td1.classList
+    // td1.classList
+    // td1.classList    
 
-    //innerHTML
+    // //innerHTML
 
-    td1.innerHTML = '      k1      '
-    td2.innerHTML = '      k2      '
-    td3.innerHTML = '      k3      '
+    // td1.innerHTML = '      k1      '
+    // td2.innerHTML = '      k2      '
+    // td3.innerHTML = '      k3      '
 
-    td4.innerHTML = ''
-    td5.innerHTML = ''
-    td6.innerHTML = ''   
+    // td4.innerHTML = ''
+    // td5.innerHTML = ''
+    // td6.innerHTML = ''   
 
-    //appendchild
-    tr1.appendChild(td1)
-    tr1.appendChild(td2)
-    tr1.appendChild(td3)
+    // //appendchild
+    // tr1.appendChild(td1)
+    // tr1.appendChild(td2)
+    // tr1.appendChild(td3)
 
-    tr2.appendChild(td4)
-    tr2.appendChild(td5)
-    tr2.appendChild(td6)
+    // tr2.appendChild(td4)
+    // tr2.appendChild(td5)
+    // tr2.appendChild(td6)
 
-    table.appendChild(tr1)
-    table.appendChild(tr2)
+    // table.appendChild(tr1)
+    // table.appendChild(tr2)
 
-    body.appendChild(table)
+    // body.appendChild(table)
 }
 
 
