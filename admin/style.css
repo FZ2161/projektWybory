@@ -1,5 +1,6 @@
 body{
     background-color: rgb(34, 34, 85);
+<<<<<<< Updated upstream
 }
 
 #tabela{
@@ -18,4 +19,7 @@ table, th, td{
 #lider{
     color: chartreuse;
 
+=======
+    display: grid;
+>>>>>>> Stashed changes
 }

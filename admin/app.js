@@ -99,9 +99,15 @@ function show(){
     td2.innerHTML = '      k2      '
     td3.innerHTML = '      k3      '
 
+<<<<<<< Updated upstream
     td4.innerHTML = k1.length
     td5.innerHTML = k2.length
     td6.innerHTML = k3.length
+=======
+    td4.innerHTML = k1
+    td5.innerHTML = k2
+    td6.innerHTML = k3   
+>>>>>>> Stashed changes
 
     //appendchild
     tr1.appendChild(td1)
